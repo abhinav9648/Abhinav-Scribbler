@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../styles/postlist.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&family=Ubuntu+Mono&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- TODO: Include Google Fonts file here -->
+    
+</head>
+
+<body>
+    <span class="heading1">
+        <div>
+            <h1 id="head">ScriBBler</h1>
+            <div><label class="scribbler2">Explore, Imagine, Create</label></div>
+        </div>
+
+        <div id="signid">
+            <button class="sign" data-toggle="modal" data-target="#exampleModal">
+                Sign In
+            </button>
+            <button class="sign" data-toggle="modal" data-target="#exampleModalSignUp">
+                Sign Up
+            </button>
+        </div>
+    </span>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Welcome Back</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                    <form>
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Email address</label>
+                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputPassword1">Password</label>
+                              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-success btn-lg btn-block">Sign In</button>
+                            
+                    </form>
+            </div>
+            <div id="not">
+                <h6>
+                    Not a member?
+                    <a href="">Signup</a>
+                </h6>
+                
+              
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModalSignUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Get Started</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                    <form>
+                            <div class="form-group">
+                                    <label for="exampleInputName1">Enter your Name</label>
+                                    <input type="email" class="form-control" id="exampleInputName1" aria-describedby="emailName" placeholder="Enter Name">
+                                  </div>
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Enter your Email address</label>
+                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputPassword1">Enter a Password</label>
+                              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                    <label for="exampleInputPassword1">Confirm Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Re-enter Password">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-success btn-lg btn-block">Sign Up</button>
+                            
+                    </form>
+            </div>
+            <div class="modal-footer">
+              
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- DELETING POST MODAL -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">
+                        Are you sure you want to delete this post?
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-footer row justify-content-between">
+                    <div class="col-2">
+                        <button type="button" class="btn btn-success" id="deletePostConfirm" onclick="deletePost()">
+                            Yes
+                        </button>
+                    </div>
+                    <div class="col-2">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">
+                            No
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ATTENTION: The HTML code for the list of posts has been given to you. You can feel free to add/delete/modify this code. You need to write the proper CSS and JavaScript code corresponding to this page so that the result looks like the screenshots given to you in the Project Statement. -->
+
+    <!-- list of all posts starts here -->
+    <div id="mainpage">
+        <!-- post 1 starts here -->
+        <div class="board1">
+            <div class="name">
+                <p>Srishti Gupta</p>
+            </div>
+
+            <div class="contain">
+                <div class="trash">
+                    <p>‘let’ me be a ‘const’(ant), not a ‘var’(iable)!</p>
+                    <span onclick="showModal(1)">
+                        <i class="fas fa-trash"></i>
+                    </span>
+                </div>
+                <p class="showOnlyThreeLines">
+                    Since JavaScript does not have any type-checking, either of these keywords
+                    can be used to declare a variable of any type (datatype) in JavaScript.
+                    Though all the three keywords are used for the same purpose, they are
+                    different.
+                </p>
+                <a href="post.html">
+                    <span class="dot">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </span>
+
+                </a>
+            </div>
+        </div>
+        <!-- post 1 ends here -->
+
+        <!-- post 2 starts here -->
+        <div class="board1">
+            <div class="name">
+                <p>Colby Fayock</p>
+            </div>
+
+            <div class="contain">
+                <div class="trash">
+                    <p>What is linting and how can it save you time?</p>
+                    <span onclick="showModal(2)">
+                        <i class="fas fa-trash"></i>
+                    </span>
+                </div>
+                <p class="showOnlyThreeLines">
+                    One of the biggest challenges in software development is time. It’s
+                    something we can’t easily get more of, but linting can help us make the
+                    most out of the time we have.
+                </p>
+                <a href="post.html">
+                    <span class="dot">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </span>
+
+                </a>
+            </div>
+        </div>
+        <!-- post 2 ends here -->
+
+        <!-- post 3 starts here -->
+        <div class="board1">
+            <div class="name">
+                <p>Yazeed Bzadough</p>
+            </div>
+
+            <div class="contain">
+                <div class="trash">
+                    <p>How to Get More Views on Your Tech Blog</p>
+                    <span onclick="showModal(3)">
+                        <i class="fas fa-trash"></i>
+                    </span>
+                </div>
+                <p class="showOnlyThreeLines">
+                    If you're a developer with a Twitter account, you've already seen everyone
+                    and their cat start a blog, YouTube channel, or Patreon. We all want to
+                    become stars, or at the very least, a recognizable name in the industry.
+                </p>
+                <a href="post.html">
+                    <span class="dot">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </span>
+
+                </a>
+            </div>
+        </div>
+        <!-- post 3 ends here -->
+
+        <!-- post 4 starts here -->
+        <div class="board1">
+            <div class="name">
+                <p>Cedd Burge</p>
+            </div>
+
+            <div class="contain">
+                <div class="trash">
+                    <p>How to write easily describable code</p>
+                    <span>
+                        <i class="fas fa-trash" onclick="showModal(4)"></i>
+                    </span>
+                </div>
+                <p class="showOnlyThreeLines">
+                    When code is not describable using words, most people have to do some
+                    mental mapping to turn it in to words. This wastes mental energy, and you
+                    run the risk of getting the mapping wrong. Different people will map to
+                    different words, which leads to confusion when discussing the code.
+                </p>
+                <a href="post.html">
+                    <span class="dot">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </span>
+
+                </a>
+            </div>
+        </div>
+        <!-- post 4 ends here -->
+
+        <!-- post 5 starts here -->
+        <div class="board1">
+            <div class="name">
+                <p>Srishti Gupta</p>
+            </div>
+
+            <div class="contain">
+                <div class="trash">
+                    <p>Everything you should know about ‘module’ & ‘require’ in Node.js</p>
+                    <span onclick="showModal(5)">
+                        <i class="fas fa-trash"></i>
+                    </span>
+                </div>
+                <p class="showOnlyThreeLines">
+                    Node.js treats each JavaScript file as a separate module. For instance, if
+                    you have a file containing some code and this file is named xyz.js, then
+                    this file is treated as a module in Node, and you can say that you’ve
+                    created a module named xyz.
+                </p>
+                <a href="post.html">
+                    <span class="dot">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </span>
+
+                </a>
+            </div>
+        </div>
+        <!-- post 5 ends here -->
+
+        <!-- TODO: Write code for delete post modal here -->
+    </div>
+    <!-- list of all posts ends here -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripts/postlist.js"></script>
+</body>
+
+</html>

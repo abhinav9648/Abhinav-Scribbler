@@ -1,0 +1,96 @@
+body {
+	background-color: #ffeedd;
+}
+.heading1 {
+	display: flex;
+	justify-content: space-between;
+}
+
+#not{
+    text-align: center;
+}
+
+#head {
+	font-family: 'Montez', cursive;
+	color: blue;
+}
+
+.sign {
+	background-color: blue;
+	height: 40px;
+	width: 100px;
+	color: white;
+	margin: 5px;
+	margin-top: 15px;
+}
+.scribbler2 {
+	font-family: 'Ubuntu Mono', monospace;
+	font-size: medium;
+}
+#mainpage {
+	margin: 50px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.board1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+    margin: 15px;
+    height: auto;
+}
+.name {
+	height: 100%;
+	background-color: white;
+	border-top-left-radius: 5%;
+	border-bottom-left-radius: 5%;
+    padding: 30px;
+    align-items: center;
+}
+.contain{
+	background-color: mistyrose;
+	padding: 30px;
+	height: 100%;
+	border-top-right-radius: 5%;
+	border-bottom-right-radius: 5%;
+}
+.trash {
+	display: flex;
+    justify-content: space-between;
+    color: gray;
+}
+.dot{
+    display: flex;
+    justify-content: flex-end;
+    color: gray;
+}
+
+/* CHANGES THE CURSOR TO POINTER UPON HOVERING OVER */
+.fas.fa-trash:hover,
+.fas.fa-ellipsis-h:hover {
+	cursor: pointer;
+}
+.board1:hover{
+    box-shadow: 3xp 3px 5px 6px pink;
+}
+
+div.modal-footer {
+	margin: 0;
+}
+
+/* SHOWS ONLY THE FIRST 3 LINES OF THE CONTENT */
+.showOnlyThreeLines {
+	height: 10rem;
+	width: 100%;
+	line-height: 3rem; /* Height / no. of lines to display */
+	overflow: hidden;
+}
+/* CHANGES THE COLOUR OF ALL ANCHOR TAGS TO BLACK */
+a,
+a:visited,
+a:link {
+	text-decoration: none;
+	color: black;
+}

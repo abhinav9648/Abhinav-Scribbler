@@ -1,0 +1,55 @@
+body{
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+   
+}
+#not{
+    text-align: center;
+}
+
+.heading1{
+    display: flex;
+    justify-content: space-between;
+}
+
+#head{
+    font-family: 'Montez', cursive; 
+    color: blue;
+}
+
+.sign{
+    background-color: blue;
+    height: 40px;
+    width: 100px;
+    color: white;
+    margin: 5px;
+    margin-top: 15px;
+}
+.scribbler2{
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: medium; 
+}
+
+
+.post{
+    background-color: yellow;
+    width: 120px;
+    margin: 5px;
+    padding: 10px;
+    /*border: 10px;
+    height: 44px;
+    text-align: center;*/
+   
+}
+
+
+.create{
+    padding: 22.5%;
+    margin-left: 300px;
+    
+}
+.container{
+    display: none;
+}
